@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Тестовое задание</title>
+    <style>
+      * {
+        box-sizing: border-box;
+        border-radius: 8px;
+      }
+      body {
+        text-align: center;
+        margin: 20px;
+        box-sizing: border-box;
+      }
+      .input_div {
+        display: flex;
+        justify-content: space-between;
+        margin: 5px auto;
+        width: 100%;
+      }
+      .input {
+        width: 78%;
+        height: 10vh;
+        border: 1px solid rgb(97, 97, 236);
+        padding: 0px 10px;
+      }
+      .send_btn {
+        width: 20%;
+        background-color: rgb(97, 97, 236);
+        color: white;
+      }
+      .send_btn:disabled {
+        background-color: rgb(176, 172, 172);
+      }
+      .chat_window {
+        text-align: center;
+        width: 40vw;
+        margin: auto;
+      }
+      .chat_output {
+        display: flex;
+        width: 100%;
+        height: 50vh;
+        border: 3px solid rgb(97, 97, 236);
+        overflow-y: auto;
+        flex-wrap: nowrap;
+        flex-direction: column;
+        overscroll-behavior: contain;
+      }
+      .chat_message {
+        word-wrap: break-word;
+        text-align: start;
+        max-width: 70%;
+        margin: 5px;
+        padding: 4px 10px;
+        border-radius: 4px;
+        color: #fff;
+      }
+      .recived {
+        background-color: #a8a6b7;
+        align-self: flex-start;
+      }
+      .send {
+        background-color: #a9baa1;
+        align-self: flex-end;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="chat_window">
+      <div class="chat_output"></div>
+      <div class="input_div">
+        <input class="input" type="text" placeholder="Введите сообщение" />
+        <button class="send_btn" type="button">Отправить</button>
+      </div>
+    </div>
+    <script src="./action.js"></script>
+  </body>
+</html>
