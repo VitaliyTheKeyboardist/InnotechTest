@@ -64,8 +64,7 @@ function loadChat() {
           (deposite) => deposite.productName === userContribution
         )
         const ratesSort = currentDeposite[0].products[0].terms[0].rates.sort(
-          (a, b) => a.minBalance - b.minBalance,
-          0
+          (a, b) => a.minBalance - b.minBalance
         )
 
         const minBalance = ratesSort[0].minBalance
